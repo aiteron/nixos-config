@@ -19,7 +19,7 @@ in
 
   home.username = "tony";
   home.homeDirectory = "/home/tony";
-  home.stateVersion = "25.05";
+  home.stateVersion = "25.11";
   programs.bash = {
     enable = true;
     shellAliases = {

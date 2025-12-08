@@ -23,6 +23,9 @@ cp theme.nix /mnt/etc/nixos/
 nixos-install --flake /mnt/etc/nixos#hyprland-btw
 
 ## type your password
-##nixos-enter --root /mnt
-##reboot
+##nixos-enter --root /mnt -c 'passwd tony'
 
+##read -p "Reboot system? (yes/no)" answer
+##if [[ "${answer,,}" == "yes" ]]; then
+##    reboot
+##fi
