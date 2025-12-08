@@ -9,20 +9,14 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "hyprland-btw";
+  networking.hostName = "aiteron-laptop";
   networking.networkmanager.enable = true;
 
-  time.timeZone = "America/Los_Angeles";
+  time.timeZone = "Asia/Yekaterinburg";
 
-  services.getty.autologinUser = "tony";
+  # services.getty.autologinUser = "aiteron";
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-    withUWSM = true;
-  };
-
-  users.users.tony = {
+  users.users.aiteron = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     packages = with pkgs; [
@@ -33,13 +27,9 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
-    vim
+    nvim
     wget
-    foot
-    kitty
-    waybar
     git
-    hyprpaper
   ];
 
   fonts.packages = with pkgs; [
@@ -49,5 +39,4 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   system.stateVersion = "25.11";
-
 }

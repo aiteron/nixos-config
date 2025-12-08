@@ -16,16 +16,14 @@ echo "2. Configuring NixOS"
 nixos-generate-config --root /mnt
 
 cp configuration.nix /mnt/etc/nixos/
-cp home.nix /mnt/etc/nixos/
-cp flake.nix /mnt/etc/nixos/
-cp theme.nix /mnt/etc/nixos/
 
-nixos-install --flake /mnt/etc/nixos#hyprland-btw
+sleep 5
 
-## type your password
-##nixos-enter --root /mnt -c 'passwd tony'
+nixos-install
 
-##read -p "Reboot system? (yes/no)" answer
-##if [[ "${answer,,}" == "yes" ]]; then
-##    reboot
-##fi
+nixos-enter --root /mnt -c 'passwd aiteron'
+
+read -p "Reboot system? (yes/no)" answer
+if [[ "${answer,,}" == "yes" ]]; then
+    reboot
+fi
