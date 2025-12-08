@@ -18,10 +18,11 @@ nixos-generate-config --root /mnt
 cp configuration.nix /mnt/etc/nixos/
 cp home.nix /mnt/etc/nixos/
 cp flake.nix /mnt/etc/nixos/
+cp theme.nix /mnt/etc/nixos/
 
-nixos-install --flake /mnt/etc/nixos#nixos-btw
+nixos-install --flake /mnt/etc/nixos#hyprland-btw
 
 ## type your password
-nixos-enter --root /mnt -c 'passwd tony'
+##nixos-enter --root /mnt -c 'passwd tony'
 reboot
 
