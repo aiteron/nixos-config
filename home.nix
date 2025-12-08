@@ -14,7 +14,7 @@ let
 in
 {
   imports = [
-    ./modules/theme.nix
+    ./theme.nix
   ];
 
   home.username = "tony";
