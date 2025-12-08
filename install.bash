@@ -23,6 +23,6 @@ cp theme.nix /mnt/etc/nixos/
 nixos-install --flake /mnt/etc/nixos#hyprland-btw
 
 ## type your password
-nixos-enter --root /mnt
-reboot
+##nixos-enter --root /mnt
+##reboot
 
