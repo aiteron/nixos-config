@@ -11,4 +11,4 @@ sudo nixos-rebuild switch
 - https://librephoenix.com/2023-10-21-intro-flake-config-setup-for-new-nixos-users#orgda914f3 - гайд по Flake
 - https://mynixos.com - Удобный инструмент для поиска пакетов nix
 
-[Flake](docs/ru/flake.md)
+[Flake](/docs/ru/flake.md)

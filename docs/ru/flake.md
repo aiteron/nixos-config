@@ -1,3 +1,3 @@
 # Flake
 
-[Tips](docs/ru/tips.md)
+[Tips](/docs/ru/tips.md)
