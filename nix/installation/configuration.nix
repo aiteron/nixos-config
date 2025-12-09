@@ -9,14 +9,12 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "aiteron-laptop";
+  networking.hostName = "<HOSTNAME>";
   networking.networkmanager.enable = true;
 
-  time.timeZone = "Asia/Yekaterinburg";
+  time.timeZone = "<TIMEZONE>"; 
 
-  # services.getty.autologinUser = "aiteron";
-
-  users.users.aiteron = {
+  users.users.<USERNAME> = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     packages = with pkgs; [
@@ -24,10 +22,8 @@
     ];
   };
 
-  programs.firefox.enable = true;
-
   environment.systemPackages = with pkgs; [
-    nvim
+    neovim
     wget
     git
   ];
@@ -38,5 +34,5 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  system.stateVersion = "25.11";
+  system.stateVersion = "<STATEVERSION>";
 }
